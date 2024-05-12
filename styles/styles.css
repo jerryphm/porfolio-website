@@ -47,6 +47,17 @@ header {
 @media (width <= 991px) {
   header {
     height: auto;
+    display: block;
+  }
+}
+
+@media (width < 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #000;
   }
 }
 
@@ -56,9 +67,24 @@ header {
   align-items: center;
 }
 
+@media (width < 768px) {
+  .nav-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.5rem;
+  }
+}
+
 .nav-logo {
   margin-top: clamp(1.5rem, 4vh, 2rem);
   margin-bottom: clamp(1.5rem, 4.5vh, 2.5rem);
+}
+
+@media (width < 768px) {
+  .nav-logo {
+    margin: 0;
+  }
 }
 
 .nav-menu {
@@ -67,6 +93,39 @@ header {
   padding: 0.3125rem;
   background-color: #141414;
   gap: 1rem;
+  
+}
+
+@media (width < 768px) {
+  .nav-menu {
+    display: block;
+    border-radius: 0;
+    padding: 0;
+    background: transparent;
+    gap: 0;
+
+    position: fixed;
+    top: 4.5rem;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10rem;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 
 .nav-item {
@@ -75,6 +134,26 @@ header {
   border-radius: 3rem;
   cursor: pointer;
   transition: all 0.2s linear;
+}
+
+@media (width < 768px) {
+  .nav-item {
+    background-color: white;
+    border-radius: 0;
+    padding: 1rem 1.5rem;
+    min-width: 70%;
+    transition: all 0.1s linear;
+  }
+
+  .nav-item:first-of-type {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+
+  .nav-item:last-of-type {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
 }
 
 .nav-item a {
@@ -86,6 +165,12 @@ header {
   text-transform: capitalize;
 }
 
+@media (width < 768px) {
+  .nav-item a {
+    color: #000;
+  }
+}
+
 .nav-item.active {
   background: #fff;
 }
@@ -94,10 +179,28 @@ header {
   color: #000;
 }
 
+@media (width < 768px) {
+  .nav-item.active {
+    background: #000;
+  }
+
+  .nav-item.active a {
+    color: #fff;
+  }
+}
+
 .nav-item-project {
   display: flex;
   align-items: center;
   gap: 2px;
+}
+
+@media (width < 768px) {
+  .nav-item-project {
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 4px;
+  }
 }
 
 .project-quantity {
@@ -121,9 +224,30 @@ header {
   color: white;
 }
 
+@media (width < 768px) {
+  .nav-item-project.active .project-quantity {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
 .nav-open,
 .nav-close {
   display: none;
+}
+
+@media (width < 768px) {
+  .nav-open.active,
+  .nav-close.active {
+    display: block;
+  }
+
+  .nav-open,
+  .nav-close {
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem;
+  }
 }
 
 /* _____________________navbar in header______________________ */
@@ -144,22 +268,22 @@ h1 {
 }
 
 .scrolldown {
-    position: absolute;
-    right: 3.75%;
-    bottom: 2.5rem;
-    animation: scrolldown 1s ease infinite both;
+  position: absolute;
+  right: 3.75%;
+  bottom: 2.5rem;
+  animation: scrolldown 1s ease infinite both;
 }
 
 @keyframes scrolldown {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .email-and-intro {
