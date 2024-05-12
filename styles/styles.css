@@ -24,7 +24,7 @@ body {
   margin: 0 auto;
 }
 
-@media (768px <= width <= 991px) {
+@media (768px <= width <= 1024px) {
   .container {
     width: var(--container-md);
   }
@@ -44,7 +44,7 @@ header {
   flex-direction: column;
 }
 
-@media (width <= 991px) {
+@media (width <= 1024px) {
   header {
     height: auto;
     display: block;
