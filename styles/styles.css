@@ -375,3 +375,142 @@ h1 {
     line-height: 1.5rem;
   }
 }
+
+/* ____________________Projects section___________________ */
+
+.projects-heading {
+  margin-top: 9rem;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+@media (width <=1024px) {
+  .projects-heading {
+    align-items: start;
+    margin-bottom: 1.5625rem;
+  }
+}
+
+@media (width< 768px) {
+  .projects-heading {
+    margin-bottom: 2.1875rem;
+  }
+}
+
+.projects-heading h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -1%;
+  margin-bottom: 0.6875rem;
+  text-transform: capitalize;
+}
+
+.projects-heading p {
+  font-size: 1.25rem;
+  line-height: 140%;
+  line-height: -1%;
+  max-width: 32ch;
+}
+
+@media (width <= 1024px) {
+  .projects-heading h2 {
+    font-size: 2rem;
+    line-height: 130%;
+  }
+
+  .projects-heading p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (width < 768px) {
+  .projects-heading p {
+    max-width: max-content;
+  }
+}
+
+.projects-container .more-btn {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  line-height: 140%;
+  letter-spacing: -1%;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  color: white;
+  border-radius: 10rem;
+}
+
+@media (width <= 1024px) {
+  .projects-heading .more-btn {
+    font-size: 1.25rem;
+  }
+}
+
+@media (width < 768px) {
+  .projects-heading {
+    position: relative;
+  }
+
+  .projects-heading .more-btn {
+    position: absolute;
+    right: 0;
+    height: 2.5rem;
+  }
+}
+
+.projects-container .more-btn img {
+  transform: rotate(-90deg);
+  margin-left: 0.375rem;
+  transition: all 0.2s linear;
+}
+
+.projects-container .more-btn:hover img {
+  transform: translateX(5px) rotate(-90deg);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 2rem;
+  column-gap: 3rem;
+}
+
+@media (width < 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.project-preview {
+  aspect-ratio: 1.15;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 3rem 2rem 0;
+
+  background: linear-gradient(45deg, #7a19f3, #a952f3);
+}
+
+.project h3,
+.project p {
+  font-size: 1.25rem;
+  line-height: 140%;
+  text-transform: capitalize;
+}
+
+.project h3 {
+  font-weight: 500;
+  margin-top: 1.5rem;
+  margin-bottom: 0.375rem;
+}
