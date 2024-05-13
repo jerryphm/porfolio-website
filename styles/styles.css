@@ -58,6 +58,7 @@ header {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 10;
     background: #000;
   }
 }
@@ -513,4 +514,133 @@ h1 {
   font-weight: 500;
   margin-top: 1.5rem;
   margin-bottom: 0.375rem;
+}
+
+/* _________________expertise________________ */
+
+.expertise-container {
+  margin-top: 9.6875rem;
+  margin-bottom: 2rem;
+}
+
+@media (width <= 1024px) {
+  .expertise-container {
+    margin-top: 4.125rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (width < 768px) {
+  .expertise-container {
+    margin: 3.75rem auto;
+  }
+}
+
+.expertise-container h2 {
+  font-size: 3rem;
+  line-height: 120%;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 4.3125rem;
+  text-transform: capitalize;
+}
+
+@media (width <= 1024px) {
+  .expertise-container h2 {
+    font-size: 2rem;
+    line-height: 130%;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (width < 768px) {
+  .expertise-container h2 {
+    font-size: 1.5rem;
+    line-height: 130%;
+    margin-bottom: 2rem;
+  }
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 2rem;
+  column-gap: 1rem;
+}
+
+@media (width <= 1024px) {
+  .expertise-grid {
+    row-gap: 3.75rem;
+    column-gap: 2rem;
+  }
+}
+
+@media (width < 768px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.expertise-item {
+  position: relative;
+  max-width: 45ch;
+}
+
+.expertise-item:nth-child(even) {
+  justify-self: end;
+}
+
+@media (width < 768px) {
+  .expertise-item:nth-child(even) {
+    justify-self: start;
+  }
+}
+
+.expertise-item h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 130%;
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+}
+
+@media (width <= 1024px) {
+  .expertise-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (width < 768px) {
+  .expertise-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.expertise-item p {
+  font-size: 1.25rem;
+  line-height: 140%;
+}
+
+@media (width <= 1024px) {
+  .expertise-item p {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (width <= 1024px) {
+  .expertise-item p {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+}
+
+.expertise-item h3::before {
+  content: "•";
+  display: inline-block;
+  position: absolute;
+  left: -0.75rem;
 }
