@@ -142,8 +142,13 @@ header {
     background-color: white;
     border-radius: 0;
     padding: 1rem 1.5rem;
-    min-width: 70%;
+    width: 70%;
     transition: all 0.1s linear;
+  }
+
+  .nav-item a {
+    display: inline-block;
+    width: 100%;
   }
 
   .nav-item:first-of-type {
@@ -503,6 +508,12 @@ h1 {
   background: linear-gradient(45deg, #7a19f3, #a952f3);
 }
 
+@media (width < 768px) {
+  .project-preview  {
+    aspect-ratio: 1.5;
+  }
+}
+
 .project h3,
 .project p {
   font-size: 1.25rem;
@@ -782,5 +793,111 @@ h1 {
   .testimonial-author span:nth-child(2),
   .testimonial-author span {
     font-size: 0.875rem;
+  }
+}
+
+/* ___________________footer____________ */
+
+.footer-container {
+  margin-top: 4.25rem;
+  margin-bottom: 3rem;
+}
+
+.footer-container h2 {
+  font-size: clamp(7rem, 9.7vw, 8.75rem);
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: -2%;
+  margin-bottom: 3rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+@media (width <= 1024px) {
+  .footer-container h2 {
+    margin-bottom: 1.6875rem;
+    font-size: 5rem;
+    line-height: 110%;
+  }
+}
+
+@media (width<768px) {
+  .footer-container h2 {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    line-height: 120%;
+    letter-spacing: -1%;
+  }
+}
+
+.footer-container button {
+  background-color: #141414;
+  border-radius: 10rem;
+  padding: 2rem 3rem;
+  border: none;
+  font-size: 1.25rem;
+  line-height: 140%;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: all 0.2s linear;
+  border: 3px solid rgba(255, 255, 255, 0);
+}
+
+.footer-container button:hover {
+  border: 3px solid rgba(255, 255, 255);
+}
+
+@media (786px<=width <= 1024px) {
+  .footer-container button {
+    padding: 1rem 1.8rem;
+    font-size: 0.75rem;
+  }
+}
+
+.footer-container button img {
+  transform: rotate(-135deg);
+}
+
+.footer-container .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 9.375rem;
+  gap: 2.5rem;
+}
+
+@media (width <=1024px) {
+  .footer-container .links {
+    margin-top: 5rem;
+  }
+}
+
+.footer-container .links span,
+.footer-container .links a {
+  font-size: 0.875rem;
+  line-height: 1.6rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: white;
+}
+
+.footer-container .links span:first-child {
+  flex-grow: 1;
+}
+
+@media (width < 768px) {
+  .footer-container .links {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  .footer-container .links span:first-child {
+    width: 100%;
+    flex-shrink: 0;
   }
 }

@@ -15,9 +15,7 @@ navItems.forEach((item) => {
     toggleActive(item);
     navCloseBtn.classList.remove("active");
     navOpenBtn.classList.add("active");
-    // setTimeout(() => {
-      navMenu.classList.remove("active");
-    // }, 250);
+    navMenu.classList.remove("active");
   });
 });
 
