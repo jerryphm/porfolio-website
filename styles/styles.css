@@ -644,3 +644,54 @@ h1 {
   position: absolute;
   left: -0.75rem;
 }
+
+.scroll-text-bg {
+  background: #141414;
+}
+
+.scroll-text-container {
+  max-width: 90rem;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 3rem 0;
+}
+
+@media (width <= 1024px) {
+  .scroll-text-container {
+    padding: 1.25rem 0;
+  }
+}
+
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 10s linear infinite;
+  font-size: min(10vw, 8.75rem);
+  line-height: 110%;
+  letter-spacing: -2%;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+@media (width <= 1024px) {
+  .scroll-text {
+    font-size: 5rem;
+    line-height: 130%;
+  }
+}
+
+@media (width < 768px) {
+  .scroll-text {
+    font-size: 3rem;
+    line-height: 120%;
+  }
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
